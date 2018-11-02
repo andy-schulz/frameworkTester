@@ -1,46 +1,40 @@
 import React, { Component } from 'react';
 import { Button, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import {DelayedButton} from "./lib/DelayedButton";
+
 import './App.css';
-
-
+import {DropDownList} from "./lib/DropDownList";
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            dropdownOpen: false
-        };
-    }
-
-    toggle() {
-        this.setState({
-            dropdownOpen: !this.state.dropdownOpen
-        });
-    }
     render() {
         return (
             <div className="App">
-                <Button color="danger" data-test-id="button">Danger!</Button>
-
-                <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} data-test-id="buttonDropDown">
-                    <DropdownToggle caret>
-                        Button Dropdown
-                    </DropdownToggle>
-                    <DropdownMenu>
-                        <DropdownItem header>Header</DropdownItem>
-                        <DropdownItem disabled>Action</DropdownItem>
-                        <DropdownItem>Another Action</DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>Another Action</DropdownItem>
-                    </DropdownMenu>
-                </ButtonDropdown>
-
+                <Container>
+                    <Row>
+                        <Col>
+                            <Button color="danger" data-test-id="button">Danger!</Button>
+                        </Col>
+                        <Col>
+                            <DropDownList>Test</DropDownList>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <DelayedButton wait={5000} />
+                        </Col>
+                        <Col>
+                            <DelayedButton wait={10000} />
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
 }
+
+
 
 export default App;
