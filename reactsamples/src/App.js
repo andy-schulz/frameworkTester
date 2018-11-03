@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Button, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import {DelayedButton} from "./lib/DelayedButton";
+import {DropDownList} from "./lib/DropDownList";
 
 import './App.css';
-import {DropDownList} from "./lib/DropDownList";
 
 class App extends Component {
 
