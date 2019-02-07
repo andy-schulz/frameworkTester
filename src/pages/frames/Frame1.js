@@ -1,6 +1,6 @@
 import React, {Component}                 from 'react';
 import Iframe                             from 'react-iframe'
-import {Row, Col, Button}                 from "reactstrap/";
+import {Row, Col, Button}                 from "reactstrap";
 
 class Frame1 extends Component {
     render() {
