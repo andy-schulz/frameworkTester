@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import { Button} from 'reactstrap';
-import { Container, Row, Col, Label } from 'reactstrap';
-import {DelayedButton} from "./lib/DelayedButton";
-import {DropDownList, DropDownOptionList} from "./lib/DropDownList";
-import {InputEmail} from "./lib/InputFields";
+import React, { Component }               from 'react';
+import {Button}                  from 'reactstrap';
+import { Container, Row, Col, Label }                      from 'reactstrap';
+import {DelayedButton}                                     from "./lib/DelayedButton";
+import {DropDownList, DropDownOptionList}                  from "./lib/DropDownList";
+import {InputEmail}                                        from "./lib/InputFields";
 
 import './App.css';
+import TestTable                                           from "./lib/TestTable";
+import SideBar                                             from "./lib/SideBar";
 
 class App extends Component {
     render() {
@@ -64,6 +66,7 @@ class App extends Component {
                             <DelayedButton delayType="Disappear"wait={10000} />
                         </Col>
                     </Row>
+
                 </Container>
             </div>
         );
