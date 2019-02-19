@@ -15,6 +15,8 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
+- script: which node
+
 - script: |
     npm install
     npm run build
@@ -25,3 +27,11 @@ steps:
     PathtoPublish: '$(System.DefaultWorkingDirectory)'
   displayName: 'publish build'
 
+
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: 'frameworkTesterServiceConnection'
+    WebAppName: 'frameworkTester'
+    Package: '$(System.DefaultWorkingDirectory)'
+    GenerateWebConfig: true
+    WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
