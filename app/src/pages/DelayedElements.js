@@ -1,7 +1,7 @@
-import React, { Component}          from 'react';
-import {Container, Row, Col, Label} from 'reactstrap';
-import {DelayedButton}              from "../lib/DelayedButton";
-import Clock from 'react-live-clock';
+import React, { Component}                  from 'react';
+import {Container, Row, Col, Label, Button} from 'reactstrap';
+import {DelayedButton}                      from "../lib/DelayedButton";
+import Clock                                from 'react-live-clock';
 
 class DelayedElements extends Component {
     render() {
@@ -31,10 +31,21 @@ class DelayedElements extends Component {
                             <DelayedButton delayType="Disappear" wait={5000} />
                         </Col>
                         <Col>
-                            <DelayedButton delayType="Disappear"wait={10000} />
+                            <DelayedButton delayType="Disappear" wait={10000} />
                         </Col>
                     </Row>
-                    <Row><Col><h3>Fading Elements</h3></Col></Row>
+                    <Row><Col><h3>Disabled Buttons</h3></Col></Row>
+                    <Row>
+                        <Col>
+                            <Label>enable button after 5 Seconds</Label>
+                        </Col>
+                        <Col>
+                            <DelayedButton delayType="Enabled" wait={5000}/>
+                        </Col>
+                        <Col>
+                            <DelayedButton delayType="Disabled" wait={5000}/>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         );

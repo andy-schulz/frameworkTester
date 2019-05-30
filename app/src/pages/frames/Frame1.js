@@ -18,7 +18,7 @@ class Frame1 extends Component {
                     width="100%"
                     height="150px"
                     id="myId"
-                    className="button-in-single-frame frametest"
+                    className="frame-button-in-single-frame frametest"
                     display="initial"
                     position="relative"
                     scrolling="false"

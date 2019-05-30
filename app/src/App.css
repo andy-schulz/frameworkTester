@@ -30,3 +30,16 @@
     transform: rotate(360deg);
   }
 }
+
+.hover-me {
+  float: left;
+  padding-right: 20px;
+}
+.my-hover-info {
+  display: none;
+}
+
+.hover-me:hover + .my-hover-info{
+  display: block;
+  outline: dotted red;
+}

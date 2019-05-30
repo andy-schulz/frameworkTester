@@ -1,13 +1,13 @@
-import React                                          from 'react';
-import ReactDOM                                       from 'react-dom';
-import {Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom'
+import React                                    from 'react';
+import ReactDOM                                 from 'react-dom';
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 
-import App                                               from './App';
-import DelayedElements                                   from './pages/DelayedElements';
-import Tables                                            from './pages/Tables';
-import NotFound                                          from './pages/NotFound';
-import SideNav, {Toggle, Nav, NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
-import * as serviceWorker                                from './serviceWorker';
+import App                                  from './App';
+import DelayedElements                      from './pages/DelayedElements';
+import Tables                               from './pages/Tables';
+import NotFound                             from './pages/NotFound';
+import SideNav, {NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
+import * as serviceWorker                   from './serviceWorker';
 
 import FrameElement  from "./pages/frames/FrameElement";
 import Frame1        from './pages/frames/Frame1';
@@ -18,6 +18,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import FrameElement2 from "./pages/frames/FrameElement2";
+import RedirectPage  from "./pages/RedirectPage";
+import ModalsPage    from "./pages/ModalsPage";
 
 
 
@@ -69,6 +71,22 @@ const routing = (
                                 Frames
                             </NavText>
                         </NavItem>
+                        <NavItem eventKey="redirect">
+                            <NavIcon>
+                                <i className="fas fa-sign-in-alt" style={{ fontSize: '1.75em' }}/>
+                            </NavIcon>
+                            <NavText>
+                                Redirect
+                            </NavText>
+                        </NavItem>
+                        <NavItem eventKey="modals">
+                            <NavIcon>
+                                <i className="fas fa-object-group" style={{ fontSize: '1.75em' }}/>
+                            </NavIcon>
+                            <NavText>
+                                Modals
+                            </NavText>
+                        </NavItem>
                     </SideNav.Nav>
                 </SideNav>
                 <main>
@@ -81,6 +99,8 @@ const routing = (
                         <Route path="/frameelement2" component={props => <FrameElement2 />} />
                         <Route path="/nestedFrame2" component={props => <Frame2 />} />
                         <Route path="/nestedFrames" component={props => <Frame1 />} />
+                        <Route path="/redirect" component={props => <RedirectPage redirectTime={5000} />} />
+                        <Route path="/modals" component={props => <ModalsPage disappear ={5000}/>} />
                         <Route component={props => <NotFound />} />
                     </Switch>
                 </main>
