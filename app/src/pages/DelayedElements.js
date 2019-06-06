@@ -1,5 +1,5 @@
 import React, { Component}                  from 'react';
-import {Container, Row, Col, Label, Button} from 'reactstrap';
+import {Container, Row, Col, Label} from 'reactstrap';
 import {DelayedButton}                      from "../lib/DelayedButton";
 import Clock                                from 'react-live-clock';
 
@@ -12,25 +12,25 @@ class DelayedElements extends Component {
 
                     <Row><Col><h2>Elements that appear or disappear</h2></Col></Row>
                     <Row><Col><h3>Delayed Buttons</h3></Col></Row>
-                    <Row>
-                        <Col>
+                    <Row data-test-id="appear">
+                        <Col data-test-id="appearCol1">
                             <Label>buttons appear in x seconds</Label>
                         </Col>
-                        <Col>
+                        <Col data-test-id="appearCol1">
                             <DelayedButton delayType="Appear" wait={5000} />
                         </Col>
-                        <Col>
-                            <DelayedButton delayType="Appear"wait={10000} />
+                        <Col data-test-id="appearCol2">
+                            <DelayedButton delayType="Appear" wait={10000} />
                         </Col>
                     </Row>
-                    <Row>
+                    <Row data-test-id="appear">
                         <Col>
                             <Label>buttons disappear in x seconds</Label>
                         </Col>
-                        <Col>
+                        <Col data-test-id="disappearCol1">
                             <DelayedButton delayType="Disappear" wait={5000} />
                         </Col>
-                        <Col>
+                        <Col data-test-id="disappearCol2">
                             <DelayedButton delayType="Disappear" wait={10000} />
                         </Col>
                     </Row>
