@@ -2,12 +2,17 @@ import React from "react";
 import {Component} from "react";
 import { Form, FormGroup, Label, Input} from 'reactstrap';
 
-export class InputEmail extends Component {
+export class LoginExample extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <Form>
                 <FormGroup>
-                    <Label for="exampleEmail">Email</Label>
+                    <Label for="exampleEmail">Email{this.props.test}</Label>
                     <Input type="email" name="email" id="exampleEmail" data-test-id="exampleEmail" placeholder="with a placeholder" />
                 </FormGroup>
                 <FormGroup>

@@ -2,7 +2,7 @@ import React, {Component}                 from 'react';
 import {Button}                           from 'reactstrap';
 import {Container, Row, Col}              from 'reactstrap';
 import {DropDownList, DropDownOptionList} from "./lib/DropDownList";
-import {InputEmail}                       from "./lib/InputFields";
+import {LoginExample}                     from "./lib/LoginExample";
 
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -14,8 +14,8 @@ class App extends Component {
                 <Container>
                     <Row><Col><h2>Inputs</h2></Col></Row>
                     <Row>
-                        <Col><InputEmail></InputEmail></Col>
-                        <Col></Col>
+                        <Col data-test-id="LoginExampleRow1"><LoginExample test="1"></LoginExample></Col>
+                        <Col data-test-id="LoginExampleRow2"><LoginExample test="2"></LoginExample></Col>
                     </Row>
 
                     <Row><Col><h2>Buttons</h2></Col></Row>
