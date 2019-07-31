@@ -17,10 +17,10 @@ class DelayedElements extends Component {
                             <Label>buttons appear in x seconds</Label>
                         </Col>
                         <Col data-test-id="appearCol1">
-                            <DelayedButton delayType="Appear" wait={5000} />
+                            <DelayedButton delayType="Appear" wait={4000} />
                         </Col>
                         <Col data-test-id="appearCol2">
-                            <DelayedButton delayType="Appear" wait={10000} />
+                            <DelayedButton delayType="Appear" wait={8000} />
                         </Col>
                     </Row>
                     <Row data-test-id="appear">
@@ -28,10 +28,10 @@ class DelayedElements extends Component {
                             <Label>buttons disappear in x seconds</Label>
                         </Col>
                         <Col data-test-id="disappearCol1">
-                            <DelayedButton delayType="Disappear" wait={5000} />
+                            <DelayedButton delayType="Disappear" wait={4000} />
                         </Col>
                         <Col data-test-id="disappearCol2">
-                            <DelayedButton delayType="Disappear" wait={10000} />
+                            <DelayedButton delayType="Disappear" wait={8000} />
                         </Col>
                     </Row>
                     <Row><Col><h3>Disabled Buttons</h3></Col></Row>
@@ -40,10 +40,10 @@ class DelayedElements extends Component {
                             <Label>enable button after 5 Seconds</Label>
                         </Col>
                         <Col>
-                            <DelayedButton delayType="Enabled" wait={5000}/>
+                            <DelayedButton delayType="Enabled" wait={4000}/>
                         </Col>
                         <Col>
-                            <DelayedButton delayType="Disabled" wait={5000}/>
+                            <DelayedButton delayType="Disabled" wait={4000}/>
                         </Col>
                     </Row>
                 </Container>
