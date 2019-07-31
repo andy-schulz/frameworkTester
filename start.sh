@@ -1,1 +1,1 @@
-docker run -p 80:3000 --name framework_tester --rm -d -rm -t framework_tester
+docker run -p 80:3000 --name framework_tester --rm -d -t framework_tester
