@@ -1,0 +1,1 @@
+docker kill framework_tester
