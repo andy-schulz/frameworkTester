@@ -7,15 +7,18 @@ import Clock                        from "./DelayedElements";
 class RedirectPage extends Component {
 
     redirectTime = 0;
+    redirectTarget = `/delayed`;
     constructor(props) {
         super(props);
         this.redirectTime = props.redirectTime;
+        this.redirectTarget = props.redirectTarget;
+
     }
 
 
     state = {
         redirect: false
-    }
+    };
 
     componentDidMount() {
         this.id = setTimeout(() => this.setState({ redirect: true }), this.redirectTime)
@@ -27,10 +30,10 @@ class RedirectPage extends Component {
 
     render() {
         return this.state.redirect
-            ? <Redirect to="/delayed" />
+            ? <Redirect to={this.redirectTarget} />
             : <Container>
 
-                <Row><Col><h2>Redirect to Page</h2></Col></Row>
+                <Row><Col><h2>Redirect to Page -> {this.redirectTarget}</h2></Col></Row>
                 <Row>
                     <Col>
                         <div> Redirect in <Timer

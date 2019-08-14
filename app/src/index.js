@@ -71,9 +71,17 @@ const routing = (
                                 Frames
                             </NavText>
                         </NavItem>
-                        <NavItem eventKey="redirect">
+                        <NavItem eventKey="redirectToDelayed">
                             <NavIcon>
                                 <i className="fas fa-sign-in-alt" style={{ fontSize: '1.75em' }}/>
+                            </NavIcon>
+                            <NavText>
+                                Redirect
+                            </NavText>
+                        </NavItem>
+                        <NavItem eventKey="redirectToFrames">
+                            <NavIcon>
+                                <i className="fas fa-box-open" style={{ fontSize: '1.75em' }}/>
                             </NavIcon>
                             <NavText>
                                 Redirect
@@ -99,7 +107,8 @@ const routing = (
                         <Route path="/frameelement2" component={props => <FrameElement2 />} />
                         <Route path="/nestedFrame2" component={props => <Frame2 />} />
                         <Route path="/nestedFrames" component={props => <Frame1 />} />
-                        <Route path="/redirect" component={props => <RedirectPage redirectTime={5000} />} />
+                        <Route path="/redirectToDelayed" component={props => <RedirectPage redirectTime={5000} redirectTarget={"/delayed"}/>} />
+                        <Route path="/redirectToFrames" component={props => <RedirectPage redirectTime={5000}  redirectTarget={"/nestedFrames"}/>} />
                         <Route path="/modals" component={props => <ModalsPage disappear ={5000}/>} />
                         <Route component={props => <NotFound />} />
                     </Switch>
