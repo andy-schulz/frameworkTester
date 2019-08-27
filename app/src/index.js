@@ -20,6 +20,7 @@ import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import FrameElement2 from "./pages/frames/FrameElement2";
 import RedirectPage  from "./pages/RedirectPage";
 import ModalsPage    from "./pages/ModalsPage";
+import DragNDrop     from "./pages/DragNDrop";
 
 
 
@@ -95,6 +96,14 @@ const routing = (
                                 Modals
                             </NavText>
                         </NavItem>
+                        <NavItem eventKey="dragndrop">
+                            <NavIcon>
+                                <i className="fas fa-grip-vertical" style={{ fontSize: '1.75em' }}/>
+                            </NavIcon>
+                            <NavText>
+                                DragNDrop
+                            </NavText>
+                        </NavItem>
                     </SideNav.Nav>
                 </SideNav>
                 <main>
@@ -110,6 +119,7 @@ const routing = (
                         <Route path="/redirectToDelayed" component={props => <RedirectPage redirectTime={5000} redirectTarget={"/delayed"}/>} />
                         <Route path="/redirectToFrames" component={props => <RedirectPage redirectTime={5000}  redirectTarget={"/nestedFrames"}/>} />
                         <Route path="/modals" component={props => <ModalsPage disappear ={5000}/>} />
+                        <Route path="/dragndrop" component={props => <DragNDrop/>} />
                         <Route component={props => <NotFound />} />
                     </Switch>
                 </main>
