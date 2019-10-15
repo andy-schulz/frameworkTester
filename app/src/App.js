@@ -95,21 +95,6 @@ class App extends Component {
                         <h2>Hovers</h2>
                         <p>Hover over the image for additional information</p>
                     </Col></Row>
-                    <Row>
-                        <Col>
-                            <div>Show user information in hover</div>
-                            <div data-test-id="usericon" className="hover-me fas fa-user" style={{ fontSize: '3em' }}/>
-                            <div className="my-hover-info">
-                                <h5 data-test-id="hoverusername" >Name: User Name</h5>
-                                <div>B-day: 01.01.1970</div>
-                                <a href="/users/">View User Information</a>
-                            </div>
-
-                        </Col>
-                        <Col>
-
-                        </Col>
-                    </Row>
                 </Container>
             </div>
         );

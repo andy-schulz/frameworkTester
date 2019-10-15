@@ -32,8 +32,7 @@
 }
 
 .hover-me {
-  float: left;
-  padding-right: 20px;
+  float: end;
 }
 .my-hover-info {
   display: none;
