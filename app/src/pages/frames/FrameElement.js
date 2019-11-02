@@ -16,7 +16,7 @@ class FrameElement extends Component {
                 <Row><Col><h3>Button in single frame</h3></Col></Row>
                 <Row>
                     <Col>
-                        <Button>Button inside single frame</Button>
+                        <Button className="firstNestedButton">Button inside single frame</Button>
                     </Col>
                 </Row>
             </div>

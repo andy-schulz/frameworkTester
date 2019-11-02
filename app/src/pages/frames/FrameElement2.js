@@ -16,7 +16,7 @@ class FrameElement2 extends Component {
                 <Row><Col><h3>Button inside nested Frames</h3></Col></Row>
                 <Row>
                     <Col>
-                        <Button>Button nested inside frame of frame</Button>
+                        <Button className="secondNestedButton">Button nested inside frame of frame</Button>
                     </Col>
                 </Row>
 
