@@ -1,0 +1,7 @@
+div[data-react-beautiful-dnd-draggable] {
+    background-color: pink;
+}
+
+div[data-react-beautiful-dnd-draggable]:hover {
+    background-color: pink;
+}
