@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import NavLinks from '@/app/ui/navLinks';
-import PowerIcon from '@mui/icons-material/PowerSettingsNew';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+
 export default function SideNav() {
     return (
         <div

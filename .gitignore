@@ -3,5 +3,6 @@
 
 # dependencies
 app/node_modules
+ft/node_modules
 
 npm-debug.log*

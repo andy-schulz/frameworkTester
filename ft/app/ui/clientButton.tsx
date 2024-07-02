@@ -1,27 +1,40 @@
 "use client";
 import React from 'react';
-import Button from '@mui/material/Button';
 import {setHeaderText} from '@/lib/setTextToElement';
 
 interface ClientButtonProps {
+    children?: React.ReactNode
     headerText?: string
     className?: string
     id?: string
-    label?: string
+    disabled?: boolean
+    visible?: boolean
+    display?: string
+    tooltip?: string
 }
 
-const ClientButton: React.FC<ClientButtonProps> = props =>
 
-    (
-        <Button
-            id={props.id}
-            className={props.className + " normal-case bg-green-500 "}
-            onClick={() => {setHeaderText("Clicked on: " + props.label || "Client Button");}}
-            variant="contained"
-        >
-            {props.label || `Client Button` }
-        </Button>
+const ClientButton: React.FC<ClientButtonProps> = props => {
+
+    return (
+            <button
+                data-tooltip-target={"test"}
+                type={"button"}
+                id={props.id}
+                className={props.className + " bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400 disabled:cursor-not-allowed"}
+                disabled={props.disabled}
+                style={{
+                    visibility: props.visible == undefined || props.visible ? "visible" : "hidden",
+                    display: props.display == undefined ? "block" : props.display
+                }}
+                onClick={() => {
+                    setHeaderText("Clicked on Button: " + props.children || "Client Button");
+                }}>
+                {props.children}
+            </button>
 
     );
+}
+
 
 export default ClientButton;

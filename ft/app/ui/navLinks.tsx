@@ -2,13 +2,14 @@ import UserGroupIcon from '@mui/icons-material/PeopleAlt';
 import GridOnIcon from '@mui/icons-material/GridOn';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import DrawIcon from '@mui/icons-material/Draw';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 
 // Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
 const links = [
-    { name: 'Elements', href: '/', icon: WidgetsIcon },
-    { name: 'Buttons', href: '/buttons', icon: CheckBoxIcon },
+    { name: 'Element Locators', href: '/', icon: WidgetsIcon },
+    { name: 'Element States', href: '/elementStates', icon: CheckBoxIcon },
+    { name: 'Canvas', href: '/canvas', icon: DrawIcon },
     { name: 'Alerts', href: '/alert', icon: NotificationsActiveIcon },
     { name: 'Frames', href: '/frames', icon: UserGroupIcon },
     { name: 'Table', href: '/table', icon: GridOnIcon },

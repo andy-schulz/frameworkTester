@@ -4,10 +4,15 @@ import "./globals.css";
 import SideNav from '@/app/ui/sidenav';
 import Header from "@/app/ui/header";
 import Footer from "@/app/ui/footer";
+import React from "react";
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
+        <head>
+            <title>Framework Tester</title>
+        </head>
+
         <body>
 
         <div
