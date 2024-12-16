@@ -8,11 +8,11 @@ import WidgetsIcon from '@mui/icons-material/Widgets';
 // Map of links to display in the side navigation.
 const links = [
     { name: 'Element Locators', href: '/', icon: WidgetsIcon },
-    { name: 'Element States', href: '/elementStates', icon: CheckBoxIcon },
-    { name: 'Canvas', href: '/canvas', icon: DrawIcon },
-    { name: 'Alerts', href: '/alert', icon: NotificationsActiveIcon },
-    { name: 'Frames', href: '/frames', icon: UserGroupIcon },
-    { name: 'Table', href: '/table', icon: GridOnIcon },
+    { name: 'Element States', href: '/elementStates/', icon: CheckBoxIcon },
+    { name: 'Canvas', href: '/canvas/', icon: DrawIcon },
+    { name: 'Alerts', href: '/alert/', icon: NotificationsActiveIcon },
+    { name: 'Frames', href: '/frames/', icon: UserGroupIcon },
+    { name: 'Table', href: '/table/', icon: GridOnIcon },
 ];
 
 export default function NavLinks() {

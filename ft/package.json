@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export -o build",
+    "buildDocker": "docker build -t andyschulz/frameworktester-nginx:latest .",
+    "pushImage": "docker push andyschulz/frameworktester-nginx:latest"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
