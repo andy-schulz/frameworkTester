@@ -5,6 +5,7 @@ import SideNav from '@/app/ui/sidenav';
 import Header from "@/app/ui/header";
 import Footer from "@/app/ui/footer";
 import React from "react";
+import EmotionRegistry from "@/app/EmotionRegistry";
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
@@ -14,7 +15,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
         </head>
 
         <body>
-
+        <EmotionRegistry>
         <div
             className="flex h-screen flex-col md:flex-row md:overflow-hidden"
         >
@@ -33,7 +34,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
                 <Footer></Footer>
             </div>
         </div>
-
+        </EmotionRegistry>
         </body>
         </html>
 

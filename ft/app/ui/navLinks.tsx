@@ -4,6 +4,8 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import DrawIcon from '@mui/icons-material/Draw';
 import WidgetsIcon from '@mui/icons-material/Widgets';
+import DownloadIcon from '@mui/icons-material/Download';
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 
 // Map of links to display in the side navigation.
 const links = [
@@ -13,6 +15,8 @@ const links = [
     { name: 'Alerts', href: '/alert/', icon: NotificationsActiveIcon },
     { name: 'Frames', href: '/frames/', icon: UserGroupIcon },
     { name: 'Table', href: '/table/', icon: GridOnIcon },
+    { name: 'Download', href: '/download/', icon: DownloadIcon },
+    { name: 'Drag & Drop', href: '/dragndrop/', icon: DragIndicatorIcon },
 ];
 
 export default function NavLinks() {

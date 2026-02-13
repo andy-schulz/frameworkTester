@@ -6,9 +6,9 @@ interface RowTextProps {
 
 const RowText: React.FC<RowTextProps> = (props) => {
   return (
-    <text className="flex flex-row">
+    <span className="flex flex-row">
         {props.children}
-    </text>
+    </span>
   );
 };
 

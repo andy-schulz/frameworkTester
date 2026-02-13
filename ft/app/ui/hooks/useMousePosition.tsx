@@ -26,6 +26,7 @@ const drawOnCanvas = (
     const startPainting = (event: React.MouseEvent<HTMLCanvasElement>) => {
         paint = true;
         currentPosition(event);
+        setHeaderText("Start Drawing on Canvas with Mouse. X: " + X + " Y: " + Y);
     }
 
     const stopPainting = (event: React.MouseEvent<HTMLCanvasElement>) => {
